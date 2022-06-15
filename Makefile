@@ -9,8 +9,9 @@ $(exec): $(objects)
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
 
-run:
-	./program.out
+install:
+	make
+	cp $(exec) /workspaces/programming-language/harry
 
 clean:
 	-rm *.out
